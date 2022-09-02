@@ -36,7 +36,7 @@ loginBtn.addEventListener('click', () => {
 
 
     //Now, the following HTML elements will be rendered only if the user provides the correct username and password:
-    fetch(`/api/restricted-area/login?username=${usernameInput.value}&password=${passwordInput.value}`, 
+    fetch(`https://timeless-teachings.herokuapp.com/api/restricted-area/login?username=${usernameInput.value}&password=${passwordInput.value}`, 
     { 
         method: 'GET'
     })
@@ -84,7 +84,7 @@ loginBtn.addEventListener('click', () => {
 
             if (selectElemListingMethodOptions.value == 'POST') {
 
-                fetch(`/api/use-post-method`, 
+                fetch(`https://timeless-teachings.herokuapp.com/api/use-post-method`, 
                 { 
                     method: 'GET' 
                 })
@@ -133,7 +133,7 @@ loginBtn.addEventListener('click', () => {
                     //Now, one more event listener so we can finally post a new quote:
                     ButtonForPostingNewQuote.addEventListener('click', () => {
 
-                        fetch(`/api/post-new-quote/quote?selectInputAuthorToPostNewQuote=${SelectAuthorHTMLElement.value}&newQuoteInput=${PostNewContentInput.value}`, 
+                        fetch(`https://timeless-teachings.herokuapp.com/api/post-new-quote/quote?selectInputAuthorToPostNewQuote=${SelectAuthorHTMLElement.value}&newQuoteInput=${PostNewContentInput.value}`, 
                         {
                             method: 'POST'
                         })
@@ -162,7 +162,7 @@ loginBtn.addEventListener('click', () => {
 
             } else if (selectElemListingMethodOptions.value == 'PUT') {
 
-                fetch(`/api/use-put-method`, 
+                fetch(`https://timeless-teachings.herokuapp.com/api/use-put-method`, 
                 { 
                     method: 'GET'
                 })
@@ -208,7 +208,7 @@ loginBtn.addEventListener('click', () => {
                         displayerDiv.innerHTML = '';
                         displayerDiv.style.visibility = 'hidden';
 
-                        fetch(`/api/get-put-method-ids/author?selectInputAuthorToUpdateQuote=${SelectAuthorHTMLElementToUpdate.value}`, 
+                        fetch(`https://timeless-teachings.herokuapp.com/api/get-put-method-ids/author?selectInputAuthorToUpdateQuote=${SelectAuthorHTMLElementToUpdate.value}`, 
                         {
                             method: 'GET'
                         })
@@ -258,7 +258,7 @@ loginBtn.addEventListener('click', () => {
                             
                             buttonUpdateQuote.addEventListener('click', () => {
 
-                                fetch(`/api/update-quote/quote?InputTextElemForUpdateQuote=${inputTextElemForUpdatingQuote.value}&selectInputAuthorToUpdateQuote=${SelectAuthorHTMLElementToUpdate.value}&selectInputQuoteIdToUpdate=${selectElemIdQuote.value}`, 
+                                fetch(`https://timeless-teachings.herokuapp.com/api/update-quote/quote?InputTextElemForUpdateQuote=${inputTextElemForUpdatingQuote.value}&selectInputAuthorToUpdateQuote=${SelectAuthorHTMLElementToUpdate.value}&selectInputQuoteIdToUpdate=${selectElemIdQuote.value}`, 
                                 {
                                     method: 'PUT'
                                 })
@@ -290,7 +290,7 @@ loginBtn.addEventListener('click', () => {
 
             } else if (selectElemListingMethodOptions.value == 'DELETE') {
                 //Pay attention at each things that was pasted here just after line 293
-                fetch(`/api/use-delete-method`, 
+                fetch(`https://timeless-teachings.herokuapp.com/api/use-delete-method`, 
                 { 
                     method: 'GET'
                 })
@@ -336,7 +336,7 @@ loginBtn.addEventListener('click', () => {
                         displayerDiv.innerHTML = '';
                         displayerDiv.style.visibility = 'hidden';
 
-                        fetch(`/api/get-del-method-ids/author?selectInputAuthorToDeleteQuote=${SelectAuthorHTMLElementToDelete.value}`, 
+                        fetch(`https://timeless-teachings.herokuapp.com/api/get-del-method-ids/author?selectInputAuthorToDeleteQuote=${SelectAuthorHTMLElementToDelete.value}`, 
                         {
                             method: 'GET'
                         })
@@ -380,7 +380,7 @@ loginBtn.addEventListener('click', () => {
                             
                             buttonDeleteQuote.addEventListener('click', () => {
 
-                                fetch(`/api/delete-quote/quote?selectInputAuthorToDeleteQuote=${SelectAuthorHTMLElementToDelete.value}&selectInputQuoteIdToDelete=${selectElemIdQuoteToBeDeleted.value}`, 
+                                fetch(`https://timeless-teachings.herokuapp.com/api/delete-quote/quote?selectInputAuthorToDeleteQuote=${SelectAuthorHTMLElementToDelete.value}&selectInputQuoteIdToDelete=${selectElemIdQuoteToBeDeleted.value}`, 
                                 {
                                     method: 'DELETE'
                                 })
