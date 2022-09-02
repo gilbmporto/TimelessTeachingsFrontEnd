@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family:'Rubik', sans-serif;
+    background-image: url(./TimelessTeachingsBackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    margin-top: 20px;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid wheat;
+    border-radius: 18px;
+    width: 70%;
+    min-width: 200px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    min-height: 280px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid wheat;
+    border-radius: 18px;
+    width: 70%;
+    min-width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    min-height: 180px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid wheat;
+    border-radius: 18px;
+    width: 70%;
+    min-width: 200px;
+}
+
+.row {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 5px;
+}
+
+#login-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#contentDisplayer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 100px;
+    min-width: 180px;
+    color: black !important;
+    background-color: azure;
+    border: 2px solid pink;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+#contentDisplayerAUD {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 100px;
+    min-width: 180px;
+    color: black !important;
+    background-color: azure;
+    border: 2px solid pink;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.standardButton {
+    height: 15%;
+    min-height: 35px;
+    width: 50%;
+    min-width: 80px;
+    background-color: rgb(215, 169, 29);
+    color: white;
+    border: 2px solid pink;
+    border-radius: 18px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.57s;
+}
+
+.standardButton:hover {
+    background-color: rgb(157, 82, 1);
+}
+
+input {
+    margin-left: 10px;
+    height: 26px;
+    border: 1.5px solid pink;
+    border-radius: 10px;
+    width: 50%;
+    min-width: 50px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    color: black;
+    margin: 0  auto;
+}
+
+.author, .quote {
+    margin: 10px 5px;
+    color: black
+}
+
+label {
+    font-size: 15px;
+}
+
+select {
+    margin-left: 3px;
+    height: 15%;
+    min-height: 30px;
+    width: 50%;
+    min-width: 50px;
+    border: 1.5px solid pink;
+    border-radius: 10px;
+}
+
+#labelForSelectElement {
+    margin-left: 5px;
+    min-height: 20px;
+    min-width: 50px;
+}
+
+footer, nav {
+    height: 20%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid wheat;
+    border-radius: 18px;
+    width: 70%;
+    min-width: 200px;
+}
