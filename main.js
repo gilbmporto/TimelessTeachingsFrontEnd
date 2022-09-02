@@ -9,7 +9,7 @@ const divToDisplayResults = document.getElementById('contentDisplayer');
 //Now, let's render the label and list of options for the user
 function renderListOptions() {
     //first, we use fetch to get the list of all the authors we have inside our database
-    fetch('/api/get-all-authors', 
+    fetch('https://timeless-teachings.herokuapp.com/api/get-all-authors', 
     {
         method: 'GET'
     })
@@ -54,7 +54,7 @@ function renderListOptions() {
             const selectAuthorsElem = document.getElementById('AuthorsNamesList');
 
             let selectedAuthorName = selectAuthorsElem.value;
-            fetch(`/api/get-specific-author/quote?authorName=${selectedAuthorName}`, {
+            fetch(`https://timeless-teachings.herokuapp.com/api/get-specific-author/quote?authorName=${selectedAuthorName}`, {
                 method: 'GET',
             })
             .then(response => {
@@ -92,7 +92,7 @@ function renderListOptions() {
         getRandomQuoteBtn.addEventListener('click', () => {
             divToDisplayResults.innerHTML = '';
 
-            fetch('/api/random-quote', 
+            fetch('https://timeless-teachings.herokuapp.com/api/random-quote', 
             {
                 method: 'GET'
             })
