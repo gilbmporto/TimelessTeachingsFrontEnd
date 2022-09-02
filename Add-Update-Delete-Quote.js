@@ -36,10 +36,7 @@ loginBtn.addEventListener('click', () => {
 
 
     //Now, the following HTML elements will be rendered only if the user provides the correct username and password:
-    fetch(`https://timeless-teachings.herokuapp.com/api/restricted-area/login?username=${usernameInput.value}&password=${passwordInput.value}`, 
-    { 
-        method: 'GET'
-    })
+    fetch(`https://timeless-teachings.herokuapp.com/api/restricted-area/login?username=${usernameInput.value}&password=${passwordInput.value}`, {cache: 'no-cache'})
     .then(response => {
         if (response.ok) {
             const newLabelElementToSelectMethod = document.createElement('label');
